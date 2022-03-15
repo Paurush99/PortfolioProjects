@@ -66,6 +66,11 @@ SELECT TOP (1000) [UniqueID ]
   where PropertyAddress is null
 
   --
+--Breaking out Adresses in individual columns
+  --Address, City, State
+  Select  PropertyAddress
+  From PortfolioProjects.dbo.NashvilleHousing
 
+  Select SUBSTRING(PropertyAddress, 1, CHARINDEX(',',PropertyAddress)) as Address
 
 
